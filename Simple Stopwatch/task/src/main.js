@@ -42,13 +42,18 @@ function resetTimer() {
     startBtn.disabled = false;
     stopBtn.disabled = true;
     resetBtn.disabled = true;
+    // Clear the laps list
+    document.querySelector('#laps').innerHTML = '';
 }
 
-// Lap Timer Function
+// Display Lap Function
 function lapTimer() {
     if (running) {
-        savedTime = difference;
-        difference = 0;
+        let lapTime = timerDisplay.innerHTML;
+        let lapsList = document.querySelector('#laps');
+        let newLap = document.createElement('li');
+        newLap.innerHTML = lapTime;
+        lapsList.appendChild(newLap);
     }
 }
 
@@ -72,8 +77,8 @@ function getShowTime() {
     milliseconds = (milliseconds < 10) ? "0" + milliseconds : milliseconds;
     // Displaying the time
     timerDisplay.innerHTML = minutes + ':' + seconds + ':' + milliseconds;
-
 }
+
 
 // Event Listeners
 startBtn.addEventListener('click', startTimer);

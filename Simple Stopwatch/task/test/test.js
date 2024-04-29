@@ -2,7 +2,6 @@ import path from 'path';
 import {correct, StageTest, wrong} from 'hs-test-web';
 
 const pagePath = path.join(import.meta.url, '../../src/index.html');
-
 class Test extends StageTest {
 
     page = this.getPage(pagePath)
@@ -205,6 +204,73 @@ class Test extends StageTest {
 
         if (secBefore > secAfter)
             return wrong(message);
+
+        return correct();
+    }), this.page.execute(async () => {
+        // test #6
+        // STAGE3 RESET BUTTON FUNCTIONALITY
+
+        // check if #reset button works
+        const reset = document.body.querySelector("#reset");
+        if (!reset) return wrong(this.missingIdMsg("#reset"));
+
+        await reset.click();
+
+        await new Promise((resolve => {
+            setTimeout(() => {
+                resolve();
+            }, 1000)
+        }));
+
+        const timer = document.body.querySelector("#timer");
+        const timerText = timer.innerText;
+
+        if (timerText !== "00:00:00") return wrong("Reset button does not work.");
+
+        return correct();
+    }), this.page.execute(async () => {
+        // test #7
+        // STAGE3 LAP BUTTON FUNCTIONALITY
+
+        // check if #laps exists
+        const laps = document.body.querySelector("#laps");
+        if (!laps) return wrong(this.missingIdMsg("#laps"));
+
+        // check if it is ol or ul
+        if (this.elementExists("#laps", ["ol", "ul"]))
+            return wrong(this.wrongTagMsg("#laps", "ol", "ul"));
+
+        const start = document.body.querySelector("#start");
+        await start.click();
+
+        await new Promise((resolve => {
+            setTimeout(() => {
+                resolve();
+            }, 1000)
+        }));
+
+        // check if #lap button works
+        const lap = document.body.querySelector("#lap");
+        if (!lap) return wrong(this.missingIdMsg("#lap"));
+
+        await lap.click();
+
+        const timer = document.body.querySelector("#timer");
+        const timerText = timer.innerText;
+
+        await new Promise((resolve => {
+            setTimeout(() => {
+                resolve();
+            }, 1000)
+        }));
+
+        // check if li exists
+        const li = document.body.querySelector("#laps li");
+        if (!li) return wrong(this.missingIdMsg("#laps li"));
+
+        // check if it has text
+        if (this.elementHasText("#laps li", timerText))
+            return wrong(this.wrongTextMsg("#laps li", timerText));
 
         return correct();
     }),
