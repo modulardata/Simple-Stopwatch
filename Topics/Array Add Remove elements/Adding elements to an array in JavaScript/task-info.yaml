@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "unshift will return 5 and push will return 7. The final array will be [&#x27;Peach&#x27;,\
+    \ &#x27;Apple&#x27;, &#x27;Banana&#x27;, &#x27;Cherry&#x27;, &#x27;Lemon&#x27;,\
+    \ &#x27;Kiwi&#x27;]."
+  - text: "unshift will return 4 and push will return 7. The final array will be [&#x27;Peach&#x27;,\
+    \ &#x27;Apple&#x27;, &#x27;Banama&#x27;, &#x27;Cherry&#x27;, &#x27;Lemon&#x27;,\
+    \ &#x27;Kiwi&#x27;]."
+  - text: "unshift will return 5 and push will return 6. The final array will be [&#x27;Peach&#x27;,\
+    \ &#x27;Apple&#x27;, &#x27;Banana&#x27;, &#x27;Cherry&#x27;, &#x27;Lemon&#x27;,\
+    \ &#x27;Kiwi&#x27;]."
+  - text: "unshift will return 4 and push will return 6. The final array will be [&#x27;Peach&#x27;,\
+    \ &#x27;Apple&#x27;, &#x27;Banana&#x27;, &#x27;Cherry&#x27;, &#x27;Lemon&#x27;,\
+    \ &#x27;Kiwi&#x27;]."
+  - text: "unshift will return 4 and push will return 6. The final array will be [&#x27;Peach&#x27;,\
+    \ &#x27;Apple&#x27;, &#x27;Cherry&#x27;, &#x27;Banama&#x27;, &#x27;Lemon&#x27;,\
+    \ &#x27;Kiwi&#x27;]."
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/34241#comment
+status: Solved
+record: -1
+local_check: false

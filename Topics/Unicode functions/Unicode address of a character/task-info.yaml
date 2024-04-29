@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: <code>Unicode.toCharacter()</code>
+  - text: <code>codePointAt()</code>
+  - text: <code>charCodeAt()</code>
+  - text: <code>String.fromCodePoint()</code>
+  - text: <code>String.fromCharCode()</code>
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31442#comment
+status: Solved
+record: -1
+local_check: false

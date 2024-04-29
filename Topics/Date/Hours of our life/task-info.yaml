@@ -1,0 +1,12 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/23073#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 20 Apr 2024 06:11:47 UTC"
+record: -1
+submission_language: javascript

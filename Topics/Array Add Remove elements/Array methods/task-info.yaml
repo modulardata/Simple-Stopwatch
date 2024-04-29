@@ -1,0 +1,29 @@
+type: matching
+captions:
+  - <code>Array.push()</code>
+  - <code>Array.shift()</code>
+  - <code>Array.unshift()</code>
+  - <code>Array.splice()</code>
+  - <code>Array.pop()</code>
+  - The <code>delete</code> operator
+options:
+  - Remove an element from the beginning of an array
+  - Adds an element to the end of an array
+  - Adds an element to the beginning of an array
+  - Sets an array element to undefined
+  - Allows you to both remove and add and replace array elements
+  - Removes an element from the end of an array
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24955#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5

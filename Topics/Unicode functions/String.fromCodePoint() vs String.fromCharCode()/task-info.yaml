@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "<code>String.fromCodePoint()</code> works with Unicode, while <code>String.fromCharCode()</code>\
+    \ works with UTF-8."
+  - text: "<code>String.fromCodePoint()</code> converts code points to hexadecimal strings,\
+    \ while <code>String.fromCharCode()</code> converts code points to decimal strings."
+  - text: "<code>String.fromCodePoint()</code> converts code points to strings, while\
+    \ <code>String.fromCharCode()</code> converts UTF-16 code units to strings."
+  - text: There is no difference; both methods serve the same purpose.
+  - text: "<code>String.fromCodePoint()</code> is used for code points within the BMP,\
+    \ while <code>String.fromCharCode()</code> is used for code points beyond the\
+    \ BMP."
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31443#comment
+status: Solved
+record: -1
+local_check: false

@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Unicode code points
+  - text: UTF-8 code points
+  - text: UTF-16 code points
+  - text: ' Binary code units'
+  - text: ASCII code points
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31440#comment
+status: Solved
+record: -1
+local_check: false

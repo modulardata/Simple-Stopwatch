@@ -1,0 +1,15 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "['dog', 'cat', undefined, 'tiger', 'pigeon']"
+  - text: "['dog', 'cat', 'elephant', 'pigeon']"
+  - text: "['dog', 'cat', 'elephant', 'tiger', 'pigeon']"
+  - text: "['dog', 'cat', 'elephant', undefined, 'pigeon']"
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24954#comment
+status: Solved
+record: -1
+local_check: false

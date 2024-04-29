@@ -1,0 +1,14 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: " With the <code>splice()</code> method, we can add elements"
+  - text: "Using the <code>splice()</code> method, we can replace one element with another"
+  - text: "With the <code>splice()</code> method, we can remove elements"
+files:
+  - name: main.js
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24953#comment
+status: Solved
+record: -1
+local_check: false

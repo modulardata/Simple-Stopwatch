@@ -1,0 +1,15 @@
+type: hyperskill
+title: Simple Stopwatch
+language: English
+summary: "<p>The Simple Stopwatch project is a web application which allows users\
+  \ to time events with precision, offering features like start, stop, reset, and\
+  \ lap time recording. Built an interface that can display elapsed time prominently\
+  \ and provides buttons for easy control. With this project, users can track multiple\
+  \ laps, making it ideal for fitness routines, sports events, or any timing needs.\_\
+  </p><br/><br/>Learn more at <a href=\"https://hyperskill.org/projects/448?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card\"\
+  >https://hyperskill.org/projects/448</a>"
+programming_language: JavaScript
+content:
+  - Simple Stopwatch
+  - Topics
+mode: Study

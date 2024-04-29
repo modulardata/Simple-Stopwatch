@@ -1,0 +1,11 @@
+custom_name: Array Add/Remove elements
+content:
+  - Theory
+  - Adding elements to an array in JavaScript
+  - The splice() method
+  - The delete operator
+  - Array methods
+  - The push() method
+  - Animals in splice
+  - Popping and unshifting
+  - Delete every second element
