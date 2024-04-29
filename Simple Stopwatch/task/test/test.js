@@ -124,7 +124,90 @@ class Test extends StageTest {
             return wrong(this.wrongTextMsg(lap, lapText));
 
         return correct();
-    })
+    }), this.page.execute(async () => {
+        // test #3
+        // STAGE2 START BUTTON FUNCTIONALITY
+
+        // check if #start button works
+        const start = document.body.querySelector("#start");
+        if (!start) return wrong(this.missingIdMsg("#start"));
+
+        await start.click();
+
+        await new Promise((resolve => {
+            setTimeout(() => {
+                resolve();
+            }, 3000)
+        }));
+
+        const timer = document.body.querySelector("#timer");
+        const timerText = timer.innerText;
+        if (timerText === "00:00:00") return wrong("Start button does not work.");
+
+        return correct();
+
+    }), this.page.execute(async () => {
+        // test #4
+        // STAGE2 STOP BUTTON FUNCTIONALITY
+
+        // check if #stop button works
+        const stop = document.body.querySelector("#stop");
+        if (!stop) return wrong(this.missingIdMsg("#stop"));
+
+        await stop.click();
+
+        await new Promise((resolve => {
+            setTimeout(() => {
+                resolve();
+            }, 1000)
+        }));
+
+        const timer = document.body.querySelector("#timer");
+        const timerText = timer.innerText;
+        if (timerText === "00:00:00") return wrong("Stop button does not work.");
+
+        try {
+            let [min, sec, ms] = timerText.split(":");
+            if (sec[1] < 2 ) return wrong("Stop button does not work. Timer didn't stop after 2 seconds.");
+        } catch (e) {
+            return wrong("There was an error while parsing the timer text. Make sure it's in the format '00:00:00'.");
+        }
+
+        return correct();
+
+    }), this.page.execute(async () => {
+        // test #5
+        // STAGE2 RESUME AFTER CLICK START BUTTON AGAIN FUNCTIONALITY
+
+        // check if #start button works
+        const start = document.body.querySelector("#start");
+        if (!start) return wrong(this.missingIdMsg("#start"));
+
+        const timer = document.body.querySelector("#timer");
+        const timerTextBefore = timer.innerText;
+        let secBefore = Number(timerTextBefore.split(":")[1][1]);
+
+        await start.click();
+
+        await new Promise((resolve => {
+            setTimeout(() => {
+                resolve();
+            }, 1000)
+        }));
+
+        const timerTextAfter = timer.innerText;
+        let secAfter = Number(timerTextAfter.split(":")[1][1]);
+
+        let message = "Timer should continue after clicking start button again.";
+
+        if (timerTextAfter === timerTextBefore)
+            return wrong(message);
+
+        if (secBefore > secAfter)
+            return wrong(message);
+
+        return correct();
+    }),
     ]
 
 }
