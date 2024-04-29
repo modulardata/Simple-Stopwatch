@@ -1,22 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Simple Stopwatch</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<!-- STAGE1 -->
-<!-- objectives -->
-<!-- HTML elements for: title-h1, timer-p or span, start, stop, reset, lap buttons -->
-<h1>Simple Stopwatch</h1>
-<p id="timer">00:00:00</p>
-<button id="start">Start</button>
-<button id="stop">Stop</button>
-<button id="reset">Reset</button>
-<button id="lap">Lap</button>
-<ul id="laps"></ul>
-<script src="main.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Stopwatch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- STAGE1 -->
+    <!-- objectives -->
+    <!-- HTML elements for: title-h1, timer-p or span, start, stop, reset, lap buttons -->
+    <div class="container">
+      <header><h1>Simple Stopwatch</h1></header>
+      <main>
+        <section class="timer"><p id="timer">00:00:00</p></section>
+        <section class="buttons">
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
+          <button id="reset">Reset</button>
+          <button id="lap">Lap</button>
+        </section>
+        <section class="laps">
+          <ul id="laps"></ul>
+        </section>
+      </main>
+    </div>
 
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>

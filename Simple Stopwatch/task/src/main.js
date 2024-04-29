@@ -46,7 +46,7 @@ function resetTimer() {
     document.querySelector('#laps').innerHTML = '';
 }
 
-// Display Lap Function
+// Display  Function
 function lapTimer() {
     if (running) {
         let lapTime = timerDisplay.innerHTML;
